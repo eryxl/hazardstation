@@ -87,6 +87,8 @@
 			else
 				damage_dealt = -1 * adjustFireLoss(damage_amount, forced = forced)
 		if(TOX)
+			if(HAS_TRAIT(src, TRAIT_RESISTTOX))
+				damage_dealt *= 0.85
 			damage_dealt = -1 * adjustToxLoss(damage_amount, forced = forced)
 		if(OXY)
 			damage_dealt = -1 * adjustOxyLoss(damage_amount, forced = forced)

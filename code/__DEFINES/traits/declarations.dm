@@ -128,6 +128,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_RESISTHIGHPRESSURE "resist_high_pressure"
 #define TRAIT_RESISTLOWPRESSURE "resist_low_pressure"
 #define TRAIT_RESISTBRUTE "resist_brute"
+#define TRAIT_RESISTTOX "resist_tox"
 /// This human is immune to the effects of being exploded. (ex_act)
 #define TRAIT_BOMBIMMUNE "bomb_immunity"
 /// This mob won't get gibbed by nukes going off

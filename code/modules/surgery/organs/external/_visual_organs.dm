@@ -116,6 +116,23 @@ Unlike normal organs, we're actually inside a persons limbs at all times
 
 	organ_flags = parent_type::organ_flags | ORGAN_EXTERNAL
 
+///The beak of a plague doctor!
+/obj/item/organ/beak
+	name = "beak"
+	desc = "How did plague doctors get beaks?"
+	icon_state = "horns"
+
+	zone = BODY_ZONE_HEAD
+	slot = ORGAN_SLOT_EXTERNAL_BEAK
+
+	preference = "feature_plague_doctor_beak"
+	dna_block = DNA_BEAK_BLOCK
+	restyle_flags = EXTERNAL_RESTYLE_ENAMEL
+
+	bodypart_overlay = /datum/bodypart_overlay/mutant/horns
+
+	organ_flags = parent_type::organ_flags | ORGAN_EXTERNAL
+
 /datum/bodypart_overlay/mutant/horns
 	layers = EXTERNAL_ADJACENT
 	feature_key = "horns"

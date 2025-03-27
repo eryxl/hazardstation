@@ -1,14 +1,14 @@
-/datum/species/pdoctor
+/datum/species/plague_doctor
 	name = "\improper Plague Doctor"
-	id = SPECIES_DOCTOR
+	id = SPECIES_PLAGUE_DOCTOR
 	inherent_traits = list(
 		TRAIT_RESISTTOX,
         TRAIT_SOFTSPOKEN,
 	)
 	payday_modifier = 1.1
 
-/datum/species/pdoctor/get_scream_sound(mob/living/carbon/human/pdoctor)
-	if(pdoctor.physique == MALE)
+/datum/species/plague_doctor/get_scream_sound(mob/living/carbon/human/plague_doctor)
+	if(plague_doctor.physique == MALE)
 		if(prob(1))
 			return 'sound/mobs/humanoids/human/scream/wilhelm_scream.ogg'
 		return pick(
@@ -28,8 +28,8 @@
 		'sound/mobs/humanoids/human/scream/femalescream_5.ogg',
 	)
 
-/datum/species/pdoctor/get_cough_sound(mob/living/carbon/human/pdoctor)
-	if(pdoctor.physique == FEMALE)
+/datum/species/plague_doctor/get_cough_sound(mob/living/carbon/human/plague_doctor)
+	if(plague_doctor.physique == FEMALE)
 		return pick(
 			'sound/mobs/humanoids/human/cough/female_cough1.ogg',
 			'sound/mobs/humanoids/human/cough/female_cough2.ogg',
@@ -47,8 +47,8 @@
 		'sound/mobs/humanoids/human/cough/male_cough6.ogg',
 	)
 
-/datum/species/pdoctor/get_cry_sound(mob/living/carbon/human/pdoctor)
-	if(pdoctor.physique == FEMALE)
+/datum/species/plague_doctor/get_cry_sound(mob/living/carbon/human/plague_doctor)
+	if(plague_doctor.physique == FEMALE)
 		return pick(
 			'sound/mobs/humanoids/human/cry/female_cry1.ogg',
 			'sound/mobs/humanoids/human/cry/female_cry2.ogg',
@@ -60,54 +60,54 @@
 	)
 
 
-/datum/species/pdoctor/get_sneeze_sound(mob/living/carbon/human/pdoctor)
-	if(pdoctor.physique == FEMALE)
+/datum/species/plague_doctor/get_sneeze_sound(mob/living/carbon/human/plague_doctor)
+	if(plague_doctor.physique == FEMALE)
 		return 'sound/mobs/humanoids/human/sneeze/female_sneeze1.ogg'
 	return 'sound/mobs/humanoids/human/sneeze/male_sneeze1.ogg'
 
-/datum/species/pdoctor/get_laugh_sound(mob/living/carbon/human/pdoctor)
-	if(pdoctor.physique == FEMALE)
+/datum/species/plague_doctor/get_laugh_sound(mob/living/carbon/human/plague_doctor)
+	if(plague_doctor.physique == FEMALE)
 		return 'sound/mobs/humanoids/human/laugh/womanlaugh.ogg'
 	return pick(
 		'sound/mobs/humanoids/human/laugh/manlaugh1.ogg',
 		'sound/mobs/humanoids/human/laugh/manlaugh2.ogg',
 	)
 
-/datum/species/pdoctor/get_sigh_sound(mob/living/carbon/human/pdoctor)
-	if(pdoctor.physique == FEMALE)
+/datum/species/plague_doctor/get_sigh_sound(mob/living/carbon/human/plague_doctor)
+	if(plague_doctor.physique == FEMALE)
 		return SFX_FEMALE_SIGH
 	return SFX_MALE_SIGH
 
-/datum/species/pdoctor/get_sniff_sound(mob/living/carbon/human/pdoctor)
+/datum/species/plague_doctor/get_sniff_sound(mob/living/carbon/human/plague_doctor)
 	if(human.physique == FEMALE)
 		return 'sound/mobs/humanoids/human/sniff/female_sniff.ogg'
 	return 'sound/mobs/humanoids/human/sniff/male_sniff.ogg'
 
-/datum/species/pdoctor/get_snore_sound(mob/living/carbon/human/pdoctor)
-	if(pdoctor.physique == FEMALE)
+/datum/species/plague_doctor/get_snore_sound(mob/living/carbon/human/plague_doctor)
+	if(plague_doctor.physique == FEMALE)
 		return SFX_SNORE_FEMALE
 	return SFX_SNORE_MALE
 
-/datum/species/pdoctor/get_hiss_sound(mob/living/carbon/human/pdoctor)
+/datum/species/plague_doctor/get_hiss_sound(mob/living/carbon/human/plague_doctor)
 	return 'sound/mobs/humanoids/human/hiss/human_hiss.ogg'
 
-/datum/species/pdoctor/get_species_description()
-	return "THE PLAGUE IS UPON US! THE PLAGUE IS UPON US! Hear my cries all who dwell a pestilence lurks around us!"
+/datum/species/plague_doctor/get_species_description()
+	return "THE PLAGUE IS UPON US! THE PLAGUE IS UPON US! Hear my cries, all who dwell, a pestilence lurks around us!"
 
-/datum/species/pdoctor/get_species_lore()
+/datum/species/plague_doctor/get_species_lore()
 	return list(
 		"These primate-descended creatures, originating from the mostly harmless Earth, \
 		have long-since outgrown their home and semi-benign designation. \
 		The space age has taken humans out of their solar system and into the galaxy-at-large.",
 
-		"Unlike the traditional humans however the Plague Doctor evolved from humans to adapt to powerful chemical warfare, to survive and dominate human expansion. \
-        Through years of fine tuning the Plague Doctors have adapted their respritory system to be able to withstand poison and skin able to expholiate toxic compounds.",
+		"Unlike traditional humans, the Plague Doctor evolved from humans to adapt to powerful chemical warfare, to survive, and dominate human expansion. \
+        Through years of fine-tuning, the Plague Doctors have adapted their respiratory system to be able to withstand poison and skin able to exfoliate toxic compounds.",
 
-		"Today, you can find Plague Doctors inside of chemistry twiddling away at todays next premier poison.",
+		"Today, you can find Plague Doctors inside of chemistry twiddling away at today's next premier poison.",
 
 	)
 
-/datum/species/pdoctor/create_pref_unique_perks()
+/datum/species/plague_doctor/create_pref_unique_perks()
 	var/list/to_add = list()
 
 	if(CONFIG_GET(number/default_laws) == 0 || CONFIG_GET(flag/silicon_asimov_superiority_override)) // Default lawset is set to Asimov

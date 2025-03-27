@@ -56,11 +56,3 @@
 	adapt_icon = "pressure"
 	mutation_traits = list(TRAIT_RESISTLOWPRESSURE, TRAIT_RESISTHIGHPRESSURE)
 	locked = FALSE
-
-/datums/mutations/adaptations/gay
-	name = "Gay"
-	desc = "A rare illness making people love ones own gender"
-	text_gain_indication = span_notice("You feel like you want to kiss boys")
-    instability = POSITIVE_INSTABILITY_MODERATE
-    var/adapt_icon = "meow"
-    locked = FALSE

@@ -137,6 +137,7 @@
 #define SPECIES_MONKEY "monkey"
 #define SPECIES_MOTH "moth"
 #define SPECIES_PROTOGEN "protogen"
+#define SPECIES_PLAGUE_DOCTOR "plague doctor"
 #define SPECIES_MUSHROOM "mush"
 #define SPECIES_PLASMAMAN "plasmaman"
 #define SPECIES_PODPERSON "pod"

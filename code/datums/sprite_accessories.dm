@@ -1884,6 +1884,11 @@
 /datum/sprite_accessory/snouts
 	icon = 'icons/mob/human/species/lizard/lizard_misc.dmi'
 	em_block = TRUE
+/datum/sprite_accessory/beaks
+	icon = 'icons/mob/human/species/plague_doctor/plague_doctor_beak.dmi'
+/datum/sprite_accessory/beaks/sharp
+	name = "Sharp"
+	icon_state = "sharp"
 
 /datum/sprite_accessory/snouts/sharp
 	name = "Sharp"

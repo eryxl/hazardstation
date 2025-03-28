@@ -4,13 +4,13 @@
 	category = PREFERENCE_CATEGORY_FEATURES
 	main_feature_name = "Beak"
 	should_generate_icons = TRUE
-	relevant_external_organ = /obj/item/organ/beak
+	relevant_external_organ = /obj/item/organ/snout
 
 /datum/preference/choiced/plauge_doctor_beak/init_possible_values()
 	return assoc_to_keys_features(SSaccessories.beaks_list)
 
-/datum/preference/choiced/plague_doctor_beak/icon_for(value)
-	return generate_lizard_side_shot(SSaccessories.beaks_list[value], "beak")
+/datum/preference/choiced/plague_doctor_snout/icon_for(value)
+	return generate_plague_doctor_side_shot(SSaccessories.beaks_list[value], "snout")
 
 /datum/preference/choiced/plague_doctor_beak/apply_to_human(mob/living/carbon/human/target, value)
-	target.dna.features["beak"] = value
+	target.dna.features["snout"] = value

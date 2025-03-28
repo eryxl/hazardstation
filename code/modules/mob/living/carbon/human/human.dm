@@ -1166,6 +1166,9 @@
 /mob/living/carbon/human/species/protogen
 	race = /datum/species/protogen
 
+/mob/living/carbon/human/species/plague_doctor
+	race = /datum/species/plague_doctor
+
 /mob/living/carbon/human/species/shadow
 	race = /datum/species/shadow
 
